@@ -1,4 +1,5 @@
 import React, { useState , useEffect} from 'react';
+import {useNavigate} from "react-router-dom"
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import {Link} from "react-router-dom";
@@ -16,7 +17,11 @@ const WeatherApp = () => {
   const [ForecastResponse , setForecastResponse] = useState(null);
   const [searchValue, setSearchValue] = useState('');
   const [error, setError] = useState('');
+  const navigate = useNavigate()
   let id = useParams();
+  if(id.id==undefined || "" || null){
+    navigate("/")
+  }
 
   useEffect(() => {
     const apiKey = "bf89bc2cde67abeceea98d4c23a10716";
