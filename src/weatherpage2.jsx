@@ -30,13 +30,10 @@ const WeatherApp = () => {
        
         const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${id.id}&appid=${apiKey}`);
         const forecastingdata = await axios.get(`https://api.openweathermap.org/data/2.5/forecast?q=${id.id}&appid=${apiKey}`);
-        console.log(`i am response data in weather ${response.data}`);
 
         dispatch(addtostore(forecastingdata.data.city.name));
         setWeatherData(response.data);
         setForecastResponse(forecastingdata.data);
-        console.log("i am useeffect",forecastingdata.data);
-        console.log(" i am useeffect called  1")
         setError('');
       } catch(error) {
         setError(`Error fetching weather data: ${error.message}`);

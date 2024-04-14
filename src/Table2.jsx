@@ -14,6 +14,7 @@ const CitiesTable = () => {
   const [sortConfig, setSortConfig] = useState({ key: null, direction: "" });
   const [suggestions, setSuggestions] = useState([]); 
   const [cityNotFound, setCityNotFound] = useState(false); 
+  const [error , seterror] = useState(null)
   const tableRef = useRef();
   const storevalues = useSelector((values)=>values.value)
   const arrofvalues  = [...storevalues]
@@ -25,7 +26,7 @@ const CitiesTable = () => {
       setData(prevData => [...prevData, ...response.data.results]);
       setHasMore(response.data.results.length > 0);
     } catch (error) {
-      console.error("Error fetching data:", error.message);
+      seterror("")
     }
     setLoading(false);
   };
@@ -195,8 +196,7 @@ const CitiesTable = () => {
             </table>
           )}
           {loading && (
-            <div>
-              Loading more data...{" "}
+            <div style={{width:"100%", textAlign:"center"}}>
               <Vortex
                 visible={true}
                 height="80"
