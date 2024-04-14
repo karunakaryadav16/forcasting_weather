@@ -7,17 +7,13 @@ function App() {
 
   return (
     <>
-    <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<Table/>}/>
-      <Route path="/weather/:id" element={<Wetherpage/> }/>
-      <Route path="/map" element={<Map/>}/>
-
-
-
-    </Routes>
-    
-    </BrowserRouter>
+      <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Table/>}/>
+            <Route path="/weather/:id" element={<Wetherpage/> }/>
+            <Route path="/map" element={<Map/>}/>
+          </Routes>
+      </BrowserRouter>
      
     </>
   )

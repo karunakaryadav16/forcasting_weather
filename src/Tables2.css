@@ -1,64 +1,16 @@
-/* html,body{
-    margin: 0px;
-    padding: 0px;
-}
-
-*{
-    box-sizing: border-box;
-}
-
-
-.table_parent_container{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    height: 100vh;
-}
-
-.position{
-    height: 200px;
-    width: 200px;
-}
-
-
-@media screen and (min-width: 667px) {
-    body {
-        overflow-x: hidden !important;
-    }
-    .table_parent_container{
-        max-width: 100% !important;
-        overflow-x: hidden !important;
-    }
-}
-
-
-.table_container{
-    height: 200px;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-} */
-
-
-
-
-
-
-
-/* Tables2.css */
-
 .table_parent_container {
-    /* margin: 20px; */
     border: 1px solid #ddd;
     border-radius: 5px;
     overflow-Y: auto;
 
   }
+  body{
+    margin: 0px;
+  }
   
   table {
     width: 100%;
+    /* height: 100%; */
     border-collapse: collapse;
   }
   
@@ -139,21 +91,103 @@
   
 
 .inputstyles{
-  width: 100%;
+  max-width: 250px;
   padding: 10px;
   text-align: center;
   font-weight: 500;
+  border: none;
+  outline: none;
+  padding: 10px;
+}
+
+.bodycontainer{
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 6px;
+}
+.navcontainer{
+  display: flex;
+  justify-content: space-between;
+  padding-left: 25px;
+  padding-right: 25px;
+  align-items: center;
+  /* padding: 5px; */
+  background-color:lightblue;
+  border-radius: 5px;
+  /* position: fixed; */
+  top: 0px;
+  width: 100%;
+  padding: 10px;
+
+
+}
+h1{
+  margin: 0px;
+}
+
+
+ button{
+  border: none;
+  outline: none;
+  padding: 10px;
+  
 }
 
 
 
+.visitedcitieslist{
+  width: 100%;
+  color: white;
+  background-color: black;
+  border-radius: 5px;
+  padding: 15px;
+  text-align: center;
+  
+}
+
+details>summary{
+  list-style-type: none;
+}
+
+details{
+  text-align: center;
+}
+
+
+.citieslistcontainer{
+  color: whitesmoke;
+  display: flex;
+  flex-wrap: wrap !important;
+  column-gap: 10px;
+  justify-content: center;
+}
 
 
 
+@media (max-width:555px){
+  details{
+    text-align: center;
+  }
+  h1{
+    font-size: 25px;
+  }
+
+
+  .navcontainer{
+    display: flex;
+    flex-direction:column;
+    row-gap: 5px;
+  
+  
+  
+  
+  }
 
 
 
-
+}
 
 
 
